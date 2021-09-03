@@ -1,22 +1,16 @@
-.container {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  box-sizing: border-box;
-  padding-top: 20px;
-  margin: 10px;
-
-  background-color: coral;
-
-  text-align: center;
-  font-size: 2em;
+*{
+  margin: 0;
+  padding:0;
 }
-.hidden1 {
-  display: none;
+a{
+  text-decoration: none;
 }
-.hidden2 {
-  opacity: 0;
+ul {
+  list-style-type: lower-roman;
+  list-style-position: inside;
 }
-.hidden3{
-  visibility: hidden;
+ol {
+  list-style-type: none;
+  list-style-image: url(./../images/airplane.png);
+  list-style-position: inside;
 }
