@@ -1,16 +1,16 @@
-*{
-  margin: 0;
-  padding:0;
+th,
+td {
+  border: 1px solid #555;
+  vertical-align: top;
+  text-align: left;
 }
-a{
-  text-decoration: none;
+table {
+  border-collapse: collapse;
+  min-width: 500px;
+  width: 100%;
+  max-width: 1100px;
+  empty-cells: hide;
 }
-ul {
-  list-style-type: lower-roman;
-  list-style-position: inside;
-}
-ol {
-  list-style-type: none;
-  list-style-image: url(./../images/airplane.png);
-  list-style-position: inside;
+caption {
+  text-align: right;
 }
