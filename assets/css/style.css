@@ -1,24 +1,39 @@
-:root{
-  --bg-color-main: #eeeeee;
-  --main-font-size: 16px;
+.navigation {
+  box-sizing: border-box;
 }
-p + p {
-  color: red;
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-p + div {
-  color: teal;
+.link-list > li {
+  display: inline-block;
 }
-#container > p ~ div {
-  font-size: 20px;
-  color:red;
+.page-link {
+  display: inline-block;
+  padding: 15px;
+  background-color: tomato;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
 }
-p:hover{
-  background-color:tomato;
+.page-link:link{
+  background-color: hotpink;
 }
-p::after{
-  content: "";
-  background-color: violet;
+.page-link:visited{
+  /* background-color: green; */
 }
-.inner-block>p:hover{
-  background-color: yellowgreen;
+.page-link:hover:not(button){
+  background-color: red;
+}
+.page-link:focus{
+  border-radius: 50%;
+  outline: 1px dotted hotpink;
+}
+.page-link:active{
+  background-color: blueviolet
+}
+div:focus{
+  background-color: red;
 }
