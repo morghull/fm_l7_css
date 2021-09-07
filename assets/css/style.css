@@ -1,39 +1,19 @@
-.navigation {
-  box-sizing: border-box;
+li:first-child {
+  color: red;
 }
-.link-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+li:last-child {
+  color: green;
 }
-.link-list > li {
-  display: inline-block;
+li:nth-child(even) {
+  /* color: lawngreen; */
 }
-.page-link {
-  display: inline-block;
-  padding: 15px;
+li:nth-child(2n + 5) {
+  color: lawngreen;
+}
+button:disabled {
   background-color: tomato;
   color: white;
-  text-decoration: none;
-  font-size: 1.2em;
 }
-.page-link:link{
-  background-color: hotpink;
-}
-.page-link:visited{
-  /* background-color: green; */
-}
-.page-link:hover:not(button){
-  background-color: red;
-}
-.page-link:focus{
-  border-radius: 50%;
-  outline: 1px dotted hotpink;
-}
-.page-link:active{
-  background-color: blueviolet
-}
-div:focus{
-  background-color: red;
+*:target {
+  color: purple;
 }
