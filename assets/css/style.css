@@ -1,19 +1,45 @@
-li:first-child {
-  color: red;
+* {
+  box-sizing: border-box;
 }
-li:last-child {
-  color: green;
+body {
+  height: 300vh;
+  margin: 0;
 }
-li:nth-child(even) {
-  /* color: lawngreen; */
+.wrapper-out {
+  width: 80%;
+  height: 700px;
+  margin: 20px auto;
+  background-color: blueviolet;
 }
-li:nth-child(2n + 5) {
-  color: lawngreen;
+.wrapper {
+  width: 80%;
+  height: 700px;
+  margin: 20px auto;
+  background-color: pink;
 }
-button:disabled {
-  background-color: tomato;
-  color: white;
+.inner {
+  background-color: chartreuse;
+  font-size: 2em;
+  z-index: 10;
 }
-*:target {
-  color: purple;
+.sizes {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #000;
+}
+.position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  z-index: 999;
+  background-color: crimson;
+}
+.relative {
+  position: relative;
+}
+.resize {
+  width: 150px;
+  background-color: coral;
 }
