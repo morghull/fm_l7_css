@@ -1,17 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 300vh;
+  padding-top: 100px;
+}
+a{
+  text-decoration: none;
+}
+.page-header {
+  padding: 20px 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  
+  background-color: teal;
+  box-shadow: 0px 6px 6px -7px #000000;
+  
+  font-family: sans-serif;
+}
+.list{
+  text-align: center;
+  font-size: 0;
+}
+.list-item {
+  display: inline-block;
+  font-size: 24px;
+}
+.list-item+.list-item{
+  margin-left: 1em;
+}
+.link {
+  display: inline-block;
+  padding: 0.5em;
+  position: relative;
+  background-color: ivory;
+  transition-property: color background-color;
+  transition-duration: 400ms;
+  transition-delay: 100ms;
+  transition-timing-function: linear;
+}
+.link:hover{
+  color:ivory;
+  background-color: blue;
+}
+.link::after,
+.link::before{
+  content:"";
+  display: block;
+  width: 0;
+  height: 3px;
+  position: absolute;
+  background: rgb(2,0,36);
+}
+.link::after{
+  left:0;
+  bottom:-5px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%);
+  transition: width 400ms ease;
+}
+.link:hover::after{
+  width: 100%;
+}
+.link::before{
+  left:100%;
+  top:-5px;
+  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 80%, rgba(2,0,36,1) 100%);
+  transition: width 400ms, left 400ms;
+}
+.link:hover::before{
+  width: 100%;
+  left: 0;
+}
+
+
+.inner{
+  height: 50px;
+  width: 10%;
+  background-color: lawngreen;
+  transition: width 1s ease;
+}
+.wrapper:hover .inner{
+  width: 100%;
+}
+.linear{
+  transition-timing-function: linear;
+}
+.ease-in{
+  transition-timing-function: ease-in;
+}
+.ease-out{
+  transition-timing-function: ease-out;
+}
+.ease-in-out{
+  transition-timing-function: ease-in-out;
+}
+
+
+
+
+
 h1 {
+  position: relative;
+  width: fit-content;
+  margin: 2em auto;
+  background-color: tomato;
   text-transform: capitalize;
+  text-align: center;
 }
 h1::before,
 h1::after {
   content: url(./../icons/ladybug.svg);
+  position: absolute;
   display: inline-block;
+  width: 50px;
+  margin-top: -15px;
   background-color: teal;
-  width: 200px;
-  height: 200px;
 }
-p::before{
+h1::before {
+  left: -200%;
+}
+h1::after {
+  right: -200%;
+}
+p::before {
   content: open-quote;
 }
-p::after{
+p::after {
   content: close-quote;
 }
